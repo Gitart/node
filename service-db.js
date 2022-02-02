@@ -2,8 +2,6 @@ const express = require('express');
 const app     = express();
 const hdl     = require('./handleres');
 
-
-
 // var knex = require('knex')({
 //   client: 'sqlite3',
 //   connection: {
@@ -37,24 +35,18 @@ const knex = require('knex')({
   useNullAsDefault: true
 });
 
-
 main()
-
 async function main() {
-  
     try {
         const result = await knex('seats').insert({title: 'Slaughterhouse Five', tut: "Пример вставки для примера"})
         console.log(result)
 
     } catch(err) {
         console.log(err)
-
     }
-
 }
 
 // process.exit(2)
-
 
 // // create a schema if no db found
 // fs.exists(dbFile, function(exists) {
@@ -66,8 +58,6 @@ async function main() {
 //     }
 // })
 
-
-
 // Start
 app.get('/', async (req, res) => {
      const result = await knex.select().table('seats')
@@ -76,7 +66,6 @@ app.get('/', async (req, res) => {
       for (const item of result) {
           console.log(item)  
       }
-     
      res.send(result);
 });
 
@@ -87,7 +76,6 @@ app.get('/sss', (req, res) => {
     // res.send('<h1>Test</h1>');
 });
 
-
 // app.get('/user', hdl.Page)
 
 // Other
@@ -97,22 +85,17 @@ app.get('/user', (req, res) => {
     // res.send('<h1>Test</h1>');
 });
 
-
 app.get('/js', (req, res) => {
     const txt = [
        { "_id": 1, "name": "Rocky",    "city": "Omaha",    "state": "NE"  },
        { "_id": 2, "name": "Dave",     "city": "Stafford",    "state": "VA" }
     ]
-
      return res.json(txt)
-
     if (true) {
         const ss = 123
     }
     console.log(ss)
 });
-
-
 
 // Listen to the App Engine-specified port, or 8080 otherwise
 const PORT = process.env.PORT || 8080;
