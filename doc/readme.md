@@ -7,8 +7,6 @@ Published on May 7, 2020
 *   [Development](https://www.digitalocean.com/community/tags/development "Development")
 *   [Programming Project](https://www.digitalocean.com/community/tags/project "Programming Project")
 
-![Default avatar](https://images.prismic.io/digitalocean/46f22fba-7718-478b-86ae-e8b875f0473e_default-avatar.png?auto=compress,format)
-
 By [Stack Abuse](https://www.digitalocean.com/community/users/stackabuse)
 
 Developer and author at DigitalOcean.
